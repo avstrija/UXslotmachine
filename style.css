@@ -1,0 +1,172 @@
+@keyframes knob {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 15px 5px #F1AEC4;
+    }
+
+    100% {
+        box-shadow: none;
+    }
+}
+
+.page {
+    width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* overflow: hidden; */
+    background-color: #f2f2f2;
+    color: #293241;
+    font-size: 18px;
+    font-family: 'Futura', Helvetica, Arial, sans-serif;
+}
+
+/* @media screen and (max-width: 1024px) {
+    .page {
+        justify-content: flex-start;
+    }
+} */
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page__title {
+    margin: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .page__title {
+        width: 95vw;
+        text-align: center;
+        font-size: 40px;
+    }
+}
+
+.slot-wrapper {
+    display: flex;
+    margin-left: 70px;
+    align-self: center;
+}
+
+@media screen and (max-width: 425px) {
+    .slot-wrapper {
+        margin-left: 0;
+    }
+}
+
+.handle {
+    position: relative;
+    width: 70px;
+    height: 250px;
+    background-image: url('./handle.svg');
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 425px) {
+    .handle {
+        width: 60px;
+        height: 130px;
+        background-image: url('./handle-small.svg');
+    }
+}
+
+.machine {
+    display: flex;
+    margin-top: 10px;
+    width: 450px;
+    max-width: 60vw;
+    height: 530px;
+    max-height: 90vmin;
+    justify-content: center;
+    background-image: url('./1064_Cheeky-Cherries-Rarity_Exclusive.png');
+    background-size: 70%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: 2;
+    border: 4px solid #293241;
+    border-radius: 7%;
+  }
+
+  .knob {
+      outline: 0;
+      border: 4px solid #293241;
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+      position: absolute;
+      right: -27px;
+      top: 10px;
+      background: radial-gradient(circle 55px at top, #F1AEC4, #A2D9D1);
+      transition: transform .3s ease-in;
+      animation: knob 3s ease-in-out infinite;
+  }
+
+  .knob:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      border-width: 4px;
+      animation: none;
+  }
+
+  .knob:active {
+      top: 13px;
+  }
+
+  @media screen and (max-width: 425px) {
+      .knob {
+          width: 50px;
+          height: 50px;
+          right: -18px;
+      }
+  }
+
+  .machine__slot {
+      margin-top: 30px;
+      margin-right: 5px;
+      font-size: 72px;
+      height: 170px;
+      width: 110px;
+      border: 4px solid #293241;
+      border-radius: 12%;
+      text-align: center;
+      line-height: 170px;
+      z-index: 1;
+      overflow: hidden;
+      box-shadow: inset 3px 3px 3px #A2D9D1;
+  }
+
+  .machine__slot:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 425px) {
+    .machine__slot {
+        font-size: 48px;
+        width: 60px;
+        height: 100px;
+        line-height: 100px;
+    }
+}
+
+  .machine__acronyms {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      transition: margin 1s ease-out;
+      text-shadow: 4px 2px #A2D9D1;
+  }
+
+  .machine__acronym {
+      margin: 0;
+  }
